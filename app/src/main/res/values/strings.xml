@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">BEXFlowSample</string>
+
+    <string name="user_id_label">Kullanıcı Id</string>
+    <string name="pass_label">Şifre</string>
+    <string name="amount_label">Tutar</string>
+
+
+    <string name="dummy_id">219be6b7-b3ca-4bd1-9886-a16d40b0bfe2</string>
+    <string name="dummy_pass">IGNoNOR/qq+GSQBJBsBuaTgNEWl253Toq+YRrrvoAUvIBy4ylUpglgOOaj/qXR0StGXwvRkEAo2MQCXd+U7uGZ7vEo+a6pWzHcavRDHH2j9x67lxFESFnexI5M4soP6mJzMsyLtw2kq5ZSWhz2G4f/KUye2dR4P8ut6WmZ4qbqE=</string>
+
+    <string name="login_label">GİRİŞ</string>
+    <string name="start_payment_label">ALIŞVERİŞ BAŞLAT</string>
+
+    <string name="general_network_exception">GENEL SUNUCU HATASI</string>
+    <string name="no_connection">INTERNET BAĞLANTI HATASI</string>
+    <string name="timeout_exception">TIMEOUT HATASI</string>
+
+
+    <string name="error_invalid_credantials">Lütfen giriş bilgilerinizi kontrol ediniz!</string>
+    <string name="error_invalid_amount">Lütfen tutar bilginizi kontrol ediniz!</string>
+</resources>
+
