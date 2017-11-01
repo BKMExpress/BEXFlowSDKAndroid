@@ -51,6 +51,6 @@ dependencies {
     annotationProcessor "org.projectlombok:lombok:$LOMBOK_VERSION"
     annotationProcessor "org.parceler:parceler:$PARCELER_VERSION"
     compile 'com.squareup.okhttp3:logging-interceptor:3.5.0'
-    compile 'com.bkm:bexflowsdk:0.0.2.s2'
+    compile 'com.bkm:bexflowsdk:1.0.0'
     testCompile 'junit:junit:4.12'
 }

@@ -1,9 +1,10 @@
-#BKM EXPRESS FLOW ANDROID SDK
+# BKM EXPRESS FLOW ANDROID SDK
 
-##NE İŞE YARAR?
+## NE İŞE YARAR?
+
 > Hizmetinize sunulan BKM Express Flow Android SDK paketi ile son kullanıcının Android cihazında BKMExpress uygulaması kurulu olmasa dahi, "Ödeme Yapma" özelliğini, uygulamanızdan çıkış yapma gereksinimi olmadan halletmenize olanak sunar.
 
-##SİSTEM GEREKSİNİMLERİ NELERDİR?
+## SİSTEM GEREKSİNİMLERİ NELERDİR?
 
  *  BKM Express Flow Android SDK paketi, Android Studio ile geliştirilen uygulamalar baz alınarak tasarlanmıştır.
  *  Min SDK Version 15 desteklenmektedir.
