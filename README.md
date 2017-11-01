@@ -1,21 +1,21 @@
-#BKM EXPRESS FLOW ANDROID SDK
+# BKM EXPRESS FLOW ANDROID SDK
 
-##NE İŞE YARAR?
+## NE İŞE YARAR?
 > Hizmetinize sunulan BKM Express Flow Android SDK paketi ile son kullanıcının Android cihazında BKMExpress uygulaması kurulu olmasa dahi, "Ödeme Yapma" özelliğini, uygulamanızdan çıkış yapma gereksinimi olmadan halletmenize olanak sunar.
 
-##SİSTEM GEREKSİNİMLERİ NELERDİR?
+## SİSTEM GEREKSİNİMLERİ NELERDİR?
 
  *  BKM Express Flow Android SDK paketi, Android Studio ile geliştirilen uygulamalar baz alınarak tasarlanmıştır.
  *  Min SDK Version 15 desteklenmektedir.
 
-##NASIL ÇALIŞIR?
+## NASIL ÇALIŞIR?
 
 Işyerleri BKM Express entegrasyonlarını tamamlayarak gerekli **kullanıcı adı** ve **şifrelerini** almalıdırlar. Bu kullanıcı adı ve şifre 
 BKM Express Android SDK paketinin entegre edeceğiniz uygulamaya görünür olması için gerekmektedir. 
 İşyeri servis uygulamaları BKM sunucularında oturum açtıktan sonra, yarattıkları ödeme işlerinden kendilerine iletilen **token** ve **path** parametreleri ile çalışmak istedikleri ortamı seçerek BKMExpress Flow SDK akışı başlatabilirler. 
 BKM sunucularında oturum açma ile detayli bilgiye [buradan](https://test-api.bkmexpress.com.tr/docs) ulaşabilirsiniz.
 
-##GRADLE ENTEGRASYONU
+## GRADLE ENTEGRASYONU
 
 * Entegrasyona başlarken lütfen size sunduğumuz kullanıcı adı ve şifreyi, local.properties dosyasına aşağıdaki gibi ekleyiniz. 
 
@@ -55,19 +55,19 @@ BKM sunucularında oturum açma ile detayli bilgiye [buradan](https://test-api.b
 * Yukarıdaki eklemeleri yapıp, projenizi gradle ile sync ettikten sonra BEX SDK nın,  BEXStarter sınıfına erişebilirsiniz. **BEXStarter** sınıfı, sunulan servis paketlerinin çalışmalarını sağlamakta, ve parametrik olarak verilen **BEXSubmitConsumerListener** && **BEXPaymentListener** interfaceleri ile de asynchrone olarak sonucu işyerine iletmektedir. (Ayrıntılı bilgi için lütfen Örnek Projeye Bakınız!)
 
 
-###BEXStarter
+### BEXStarter
 
                 public static void startBexFlow(Context context, Environment environment,String paymentIssueId, String paymentIssuePath, String paymentIssueToken, BEXPaymentListener listener);
                
 
-###BEXPaymentListener
+### BEXPaymentListener
 
                  public void onSuccess(); //BAŞARILI ÖDEME İŞLEMİ 
                  public void onCancelled(); //KULLANICI ÖDEME İŞLEMİNİ İPTAL ETTİ veya İŞYERİ ÖDEMEYİ REDDETTİ
                  public void onFailure(int errorId,String errorMsg); //ÖDEME İŞLEMİ VERİLEN HATA YÜZÜNDEN İPTAL EDİLDİ
 
 
-###ÖRNEK KULLANIM - PAYMENT (ÖDEME)
+### ÖRNEK KULLANIM - PAYMENT (ÖDEME)
 
 
     RestManagerApp.getInstance().requestCreatePaymentIssue("merchant_token", "merchant_path", new CreateIssueReq("amount", "installment_url", "nonce_url")).enqueue(new RetrofitCallback<MerchantCreateIssueResponse>(getActivity()) {
@@ -99,7 +99,7 @@ BKM sunucularında oturum açma ile detayli bilgiye [buradan](https://test-api.b
     });
 
                  
-##ORTAMLAR
+## ORTAMLAR
 
 BKM Express Android SDK paketi iki farklı ortamda çalışmaktadır. (Ortam değişikliği => Environment parametresi ile gerçekleşmektedir. Lütfen örnek koda bakınız.)
 
