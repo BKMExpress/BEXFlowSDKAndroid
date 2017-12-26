@@ -106,6 +106,7 @@ BKM Express Android SDK paketi iki farklı ortamda çalışmaktadır. (Ortam de�
 
 * TEST
 * PROD
+* PREPROD
 
 **Her ortam için kullanıcı adı ve şifre aynıdır.**
 
