@@ -50,7 +50,7 @@ BKM sunucularında oturum açma ile detayli bilgiye [buradan](https://test-api.b
                 
 * Test, Preprod veya Prod ortamda çalışacak paket için
                  
-        compile 'com.bkm:bexflowsdk:1.0.0'
+        compile 'com.bkm:bexflowsdk:1.0.1'
 
 
 * Yukarıdaki eklemeleri yapıp, projenizi gradle ile sync ettikten sonra BEX SDK nın,  BEXStarter sınıfına erişebilirsiniz. **BEXStarter** sınıfı, sunulan servis paketlerinin çalışmalarını sağlamakta, ve parametrik olarak verilen **BEXSubmitConsumerListener** && **BEXPaymentListener** interfaceleri ile de asynchrone olarak sonucu işyerine iletmektedir. (Ayrıntılı bilgi için lütfen Örnek Projeye Bakınız!)

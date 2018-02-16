@@ -1,17 +1,17 @@
 apply plugin: 'com.android.application'
 
-def SUPPORT_VERSION = "26.0.1"
+def SUPPORT_VERSION = "26.1.0"
 def RETROFIT_VERSION = '2.2.0'
 def LOMBOK_VERSION = '1.16.12'
 def PARCELER_VERSION = '1.1.5'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    compileSdkVersion 27
+    buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "com.bkm.bexflowsample"
         minSdkVersion 15
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -22,7 +22,7 @@ android {
             shrinkResources true
             debuggable false
             //buildConfigField("String", "BASEURL", "\"https://bex-api.finartz.com/v1/\"")
-            buildConfigField("String", "BASEURL", "\"https://test-api.bkmexpress.com.tr/\"")
+            buildConfigField("String", "BASEURL", "\"https://preprod-api.bkmexpress.com.tr/\"")
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         release {
@@ -30,7 +30,7 @@ android {
             shrinkResources false
             debuggable true
             //buildConfigField("String", "BASEURL", "\"https://bex-api.finartz.com/v1/\"")
-            buildConfigField("String", "BASEURL", "\"https://test-api.bkmexpress.com.tr/\"")
+            buildConfigField("String", "BASEURL", "\"https://preprod-api.bkmexpress.com.tr/\"")
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -43,14 +43,14 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile "com.android.support:appcompat-v7:$SUPPORT_VERSION"
-    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.google.code.gson:gson:2.8.0'
     compile "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION"
     compile "com.squareup.retrofit2:converter-gson:$RETROFIT_VERSION"
     provided "org.projectlombok:lombok:$LOMBOK_VERSION"
     compile "org.parceler:parceler-api:$PARCELER_VERSION"
     annotationProcessor "org.projectlombok:lombok:$LOMBOK_VERSION"
     annotationProcessor "org.parceler:parceler:$PARCELER_VERSION"
-    compile 'com.squareup.okhttp3:logging-interceptor:3.5.0'
-    compile 'com.bkm:bexflowsdk:1.0.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    compile 'com.bkm:bexflowsdk:1.0.1'
     testCompile 'junit:junit:4.12'
 }

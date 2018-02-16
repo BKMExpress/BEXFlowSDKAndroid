@@ -69,6 +69,7 @@ public class FragmentAmount extends Fragment implements View.OnClickListener {
             @Override
             public void onSuccess(MerchantCreateIssueResponse successResponse) {
                 ((ActivityMain)getActivity()).dismissLoadingDialog();
+
                 BEXStarter.startBexFlow(getActivity(), Environment.TEST, successResponse.getCreateIssueObject().getId(), successResponse.getCreateIssueObject().getPath(), successResponse.getCreateIssueObject().getToken(), new BEXPaymentListener(){
                     @Override
                     public void onSuccess() {
