@@ -45,12 +45,12 @@ BKM sunucularında oturum açma ile detayli bilgiye [buradan](https://test-api.b
                 
 * Daha sonra yine <u>uygulamanızın</u> build.gradle dosyasındaki dependencies kısmına aşağıdaki gradle bağlantılarını ekleyiniz.
         
-        compile 'com.android.support:appcompat-v7:26.0.1'
+        implementation 'com.android.support:appcompat-v7:26.0.1'
       
                 
 * Test, Preprod veya Prod ortamda çalışacak paket için
                  
-        compile 'com.bkm:bexflowsdk:1.0.1'
+        implementation 'com.bkm:bexflowsdk:1.0.2'
 
 
 * Yukarıdaki eklemeleri yapıp, projenizi gradle ile sync ettikten sonra BEX SDK nın,  BEXStarter sınıfına erişebilirsiniz. **BEXStarter** sınıfı, sunulan servis paketlerinin çalışmalarını sağlamakta, ve parametrik olarak verilen **BEXSubmitConsumerListener** && **BEXPaymentListener** interfaceleri ile de asynchrone olarak sonucu işyerine iletmektedir. (Ayrıntılı bilgi için lütfen Örnek Projeye Bakınız!)

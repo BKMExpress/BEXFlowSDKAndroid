@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatEditText;
+import android.text.InputFilter;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,7 +47,6 @@ public class FragmentAmount extends Fragment implements View.OnClickListener {
         apped_amount = root.findViewById(R.id.apped_amount);
         continue_btn = root.findViewById(R.id.continue_btn);
         continue_btn.setOnClickListener(this);
-
     }
 
     @Override
@@ -65,12 +65,12 @@ public class FragmentAmount extends Fragment implements View.OnClickListener {
 
         String instUrl = "https://bex-demo.finartz.com/merchant/installments";
         ((ActivityMain)getActivity()).showLoadingDialog();
-        RestManagerApp.getInstance().requestCreatePaymentIssue(((ActivityMain)getActivity()).getMerchant_token(), ((ActivityMain)getActivity()).getMerchant_path(), new CreateIssueReq(apped_amount.getText().toString(), instUrl, "")).enqueue(new RetrofitCallback<MerchantCreateIssueResponse>(getActivity()) {
+        RestManagerApp.getInstance().requestCreatePaymentIssue(((ActivityMain)getActivity()).getMerchant_token(), ((ActivityMain)getActivity()).getMerchant_path(), new CreateIssueReq(apped_amount.getText().toString().replace(".",","), instUrl, "")).enqueue(new RetrofitCallback<MerchantCreateIssueResponse>(getActivity()) {
             @Override
             public void onSuccess(MerchantCreateIssueResponse successResponse) {
                 ((ActivityMain)getActivity()).dismissLoadingDialog();
 
-                BEXStarter.startBexFlow(getActivity(), Environment.TEST, successResponse.getCreateIssueObject().getId(), successResponse.getCreateIssueObject().getPath(), successResponse.getCreateIssueObject().getToken(), new BEXPaymentListener(){
+                BEXStarter.startBexFlow(getActivity(), Environment.PREPROD, successResponse.getCreateIssueObject().getId(), successResponse.getCreateIssueObject().getPath(), successResponse.getCreateIssueObject().getToken(), new BEXPaymentListener(){
                     @Override
                     public void onSuccess() {
                         Toast.makeText(getActivity(),"Ödeme Başarılı!",Toast.LENGTH_SHORT).show();
