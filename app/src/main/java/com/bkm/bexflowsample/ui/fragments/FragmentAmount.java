@@ -94,7 +94,6 @@ public class FragmentAmount extends Fragment implements View.OnClickListener {
                 Toast.makeText(getActivity(), "Payment Ticket Yaratma Problemi :: errMsg -> " + error, Toast.LENGTH_LONG).show();
             }
         });
-
     }
 
 
