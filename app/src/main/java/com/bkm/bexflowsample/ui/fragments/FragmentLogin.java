@@ -1,9 +1,9 @@
 package com.bkm.bexflowsample.ui.fragments;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.AppCompatEditText;
+import androidx.fragment.app.Fragment;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatEditText;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;

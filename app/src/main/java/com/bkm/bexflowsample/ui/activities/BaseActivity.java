@@ -4,10 +4,10 @@ package com.bkm.bexflowsample.ui.activities;
 import android.content.DialogInterface;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
-import android.support.v4.view.ViewCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.AppCompatDialog;
-import android.support.v7.widget.AppCompatImageView;
+import androidx.core.view.ViewCompat;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDialog;
+import androidx.appcompat.widget.AppCompatImageView;
 import android.view.MenuItem;
 import android.view.View;
 

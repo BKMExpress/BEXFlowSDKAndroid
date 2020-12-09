@@ -1,5 +1,7 @@
 package com.bkm.bexflowsample.network.core;
 
+import com.bkm.bexflowsample.network.core.TLSOnlySocketFactory;
+
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 
