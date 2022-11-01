@@ -22,7 +22,7 @@ BKM sunucularında oturum açma ile detayli bilgiye [buradan](https://test-api.b
 
                 bkm_username=<<YOUR_USERNAME>>
                 bkm_password=<<YOUR_PASSWORD>>
-                bkm_maven_url = http://54.174.1.67/artifactory/bexflowsdk-android-release
+                bkm_maven_url = http://18.208.172.191/artifactory/bexflowsdk-android-release
 
 * SDK paketini gradle dependency ile eklemek için, <u>projenizin</u> build.gradle dosyasındaki repositories kısmına aşağıdaki kod bloğunu ekleyiniz.
 
