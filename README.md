@@ -45,11 +45,7 @@ BKM sunucularında oturum açma ile detayli bilgiye [buradan](https://test-api.b
                 
 * AndroidX desteği olan uygulamalar için;
                  
-        implementation 'com.bkm:bexflowsdk:2.1.3'
-        
-* AndroidX desteği BULUNMAYAN uygulamalar için;
-
-        implementation 'com.bkm:bexflowsdk:1.0.5'
+        implementation 'com.bkm:bexflowsdk:2.1.4'
         
         
 * Yukarıdaki eklemeleri yapıp, projenizi gradle ile sync ettikten sonra BEX SDK nın,  BEXStarter sınıfına erişebilirsiniz. **BEXStarter** sınıfı, sunulan servis paketlerinin çalışmalarını sağlamakta, ve parametrik olarak verilen **BEXSubmitConsumerListener** && **BEXPaymentListener** interfaceleri ile de asynchrone olarak sonucu işyerine iletmektedir. (Ayrıntılı bilgi için lütfen Örnek Projeye Bakınız!)
